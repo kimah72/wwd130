@@ -6,10 +6,19 @@
 }
 body {
     background-color: white;
+    color: #103856
 }
 
 header {
-    background-color: white;
+    background-color: #91D0DE;
+    color: #103856
+}
+
+nav a {
+    text-align: center;
+    color: #103856;
+    text-decoration: none;
+
 }
 
 nav a:hover {
@@ -18,11 +27,8 @@ nav a:hover {
     
 }
 
-nav a {
-    text-align: center;
-    color: #103856;
-    text-decoration: none;
-
+img.logo {
+    width: 80px;
 }
 
 .home-title {
@@ -53,6 +59,10 @@ h4 {
     width: 80px;
 }
 
+#hero-img {
+    width: 100%;
+}
+
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
 }
@@ -68,10 +78,12 @@ main section {
 #background {
     height: 725px;
     background-color: #91D0DE;
+    color: #103856
 }
 
 .msg {
     background-color: #91D0DE;
+    color: #103856
 }
 .msg h2 {
     color: #103856;
