@@ -1,12 +1,102 @@
-/*Font Family has been added to style sheet*/
+/* This is the style sheet for the main personal site index*/
+
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300&family=Nunito:wght@300;400&family=Raleway:wght@100;400&display=swap');
 
-.logo {
-    width: 250px;
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+/*#logo_link {
+  padding: 5px;
+  justify-self: left;
+  align-self: center;
+}*/
+body {
+  background-color: #FFD4C2;
+  color: #564E4E;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+header {
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  color: #4B4444;
+  font-size: .8em;
+}
+.buttons a {
+  padding-top: 125px;
+}
+.sidenav {
+  height: 140%;
+  width: 188px;
+  position: absolute;
+  z-index: 0;
+  top: 125px;
+  left: 0;
+  background-color: #ED8AA7;
+  overflow-x: auto;
+  padding-top: 20px;
+}
+.sidenav a {
+  margin-top: 0;
+  padding: 6px 6px 6px 40px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #741A55;
+}
+
+.main {
+  margin-left: 225px; /* Same as the width of the sidenav */
+  color: #4B4444;
+}
+img.me {
+  border: 4px solid #494444;
+  width: 180px;
+  opacity: 90%;
+  z-index: 1;
+}
+img.logo {
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 120px;
+    grid-column: 2/3;
+    grid-row-start: 1;
   }
   .icon {
     height: 75px;
+    opacity: 65%;
+    align-content: center;
   }
   .resume {
     width: 200px;
+  }
+
+footer {
+  margin-top: 25px;
+  margin-left: 188px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: white;
+  color: #494444;
+  font-size: .8em;
+  display: flex;
+  padding-left: 25px;
+  align-items: left;
+}
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }

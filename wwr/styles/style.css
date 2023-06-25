@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Julius+Sans+One&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&family=Raleway:ital,wght@0,100;0,200;1,100&display=swap');
 
 #content {
-    max-width: 1600px;
+    max-width: 1600px; 
     margin: 0 auto;
 }
 #logo_link {
@@ -17,8 +17,7 @@ body {
     font-family: 'Montserrat', 'Bradley Hand', sans-serif;
     font-size: 22px;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;   
 }
 header {
     display: grid;
@@ -36,7 +35,6 @@ nav a {
     color: #103856;
     text-align: center;
     padding: 35px;
-
 }
 nav a:hover {
     background-color: #103856;

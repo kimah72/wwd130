@@ -18,11 +18,11 @@ Fonts are separated by a | */
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: #396E94;  /* headlines on a white background */ 
   --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-color-on-white: #0b032d; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #FFD4C2; /* paragraph text on a colored background */ 
   --paragraph-background-color: #9b4673  ;
   --nav-link-color: #396E94;
-  --nav-background-color: #0b032d;
+  --nav-background-color: ;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #396E94;
 }
@@ -33,7 +33,7 @@ Fonts are separated by a | */
 body {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4em;
+  padding: 4em; 
   font-size: 18px;
   text-align: center;
   background-color: white;
