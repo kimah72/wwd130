@@ -206,7 +206,6 @@ footer {
   font-size: .8em;
   display: flex;
   padding-left: 25px;
-  align-items: left;
 }
 
   @media screen and (max-height: 450px) {
