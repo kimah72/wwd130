@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;300&family=Nunito:wght@300;400&family=Raleway:wght@100;400&display=swap');
 
 #content {
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 /*#logo_link {
@@ -12,18 +12,23 @@
   align-self: center;
 }*/
 body {
-  background-color: #FFD4C2;
+  background-color: #FFE2D6;
   color: #564E4E;
   font-family: 'Nunito', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 65%;
 }
-h1 {
+h1, h4, li{
   font-family: 'Raleway', sans-serif;
 }
+h4 {
+  text-align: center;
+}
 header {
-  margin-left: 0;
+  margin-left: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: white;
@@ -33,61 +38,169 @@ header {
 .buttons a {
   padding-top: 125px;
 }
+/* Fixed sidenav, full height */
 .sidenav {
-  height: 140%;
-  width: 188px;
-  position: absolute;
-  z-index: 0;
-  top: 125px;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
   background-color: #ED8AA7;
-  overflow-x: auto;
-  padding-top: 20px;
+  overflow-x: hidden;
+  padding-top: 25px;
+  margin: 0 auto;
 }
-.sidenav a {
-  margin-top: 0;
-  padding: 6px 6px 6px 40px;
-  text-decoration: none;
-  font-size: 22px;
-  color: #ffffff;
-  display: block;
-}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
 
-.sidenav a:hover {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
   color: #741A55;
 }
-
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #494444;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #6d6868;
+  padding-left: 8px;
+}
+/* Main content */
 .main {
-  margin-left: 225px; /* Same as the width of the sidenav */
-  color: #4B4444;
+  margin-left: 220px; /* Same as the width of the sidenav */
+  font-size: 20px;
+  padding: 0px 10px;
 }
 img.me {
-  border: 4px solid #494444;
-  width: 180px;
-  opacity: 90%;
-  z-index: 1;
+  /* border: 4px solid #494444; */
+  height: 100px;
+  opacity: 80%;
 }
 img.logo {
-    padding-left: 6px;
-    padding-right: 6px;
-    height: 120px;
-    grid-column: 2/3;
-    grid-row-start: 1;
-  }
-  .icon {
-    height: 75px;
-    opacity: 65%;
-    align-content: center;
-  }
-  .resume {
+  height: 100px;
+  grid-column-start: 2;
+}
+img.banner {
+  height: 100px;
+  grid-column-start: 3;
+}
+.icon {
+  height: 50px;
+  opacity: 65%;
+  margin: auto;
+}
+.resume {
     width: 200px;
-  }
+}
+* {box-sizing:border-box}
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #494444;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 footer {
   margin-top: 25px;
-  margin-left: 188px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 200px;
+  width: 100%;
   background-color: white;
   color: #494444;
   font-size: .8em;

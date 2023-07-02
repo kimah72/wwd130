@@ -7,22 +7,29 @@
 </head>
 <body>
   <div class="sidenav">
-    <a class="button" href="index.html">Landing
-        <img class="icon" src="images/home.png" alt="home icon">
+    <a class="button" href="index.html"> Home
+        <!-- <img class="icon" src="images/home.png" alt="home icon"> -->
     </a>
-    <a href="portfolio.html">Porfolio
-        <img class="icon" src="images/portfolio.png" alt="portfolio icon">
+    <a href="portfolio.html"> Porfolio
+        <!-- <img class="icon" src="images/portfolio.png" alt="portfolio icon"> -->
     </a>
-    <a href="contact.html">Contact
-        <img class="icon" src="images/email.png"alt="contact">
+    <a href="contact.html"> Contact
+        <!-- <img class="icon" src="images/email.png"alt="contact"> -->
     </a>
+    <button class="dropdown-btn"> Quick Links
+      </button>
+      <div class="dropdown-container">
+        <a href="#">Resume</a>
+        <a href="mailto:min23005@byui.edu">E-mail</a>
+        <a href="#">Git Hub Directory</a>
+      </div>
   </div>
   <div id="content">
-        <header>
-            <img class="me" src="images/myphoto.jpg" alt="Me">
-            <img class="logo" src="images/logo2.png" alt="Kimberly Miner Frontend Developer">
-            <img src="images/Shutterstock_1985091362.jpg" alt="petals">
-        </header>       
+    <header>
+      <img class="me" src="images/myphoto.jpg" alt="Me">
+      <img class="logo" src="images/logo2.png" alt="Kimberly Miner Frontend Developer">
+      <img class="banner" src="images/Shutterstock_1985091362.jpg" alt="petals">
+    </header>        
         <main>
             <div class="main">
                 <h1>My Virtual Portfolio</h1>
@@ -44,5 +51,22 @@
           <p> &copy; 2023 - Kimberly Miner - <a href="site-plan.html">Site Plan</a></p>
         </footer>
     </div>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
