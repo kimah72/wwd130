@@ -6,11 +6,6 @@
   max-width: 100%;
   margin: 0 auto;
 }
-/*#logo_link {
-  padding: 5px;
-  justify-self: left;
-  align-self: center;
-}*/
 body {
   background-color: #FFE2D6;
   color: #564E4E;
@@ -18,8 +13,6 @@ body {
   font-size: 20px;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 65%;
 }
 h1, h4, li{
   font-family: 'Raleway', sans-serif;
@@ -30,13 +23,21 @@ h4 {
 header {
   margin-left: 200px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
   background-color: white;
-  color: #4B4444;
-  font-size: .8em;
 }
-.buttons a {
-  padding-top: 125px;
+.me {
+  height: 100px;
+  opacity: 80%;
+  grid-column-start: 1;
+}
+.logo {
+  height: 100px;
+  grid-column-start: 2;
+}
+.banner {
+  height: 100px;
+  grid-column-start: 3;
 }
 /* Fixed sidenav, full height */
 .sidenav {
@@ -81,38 +82,46 @@ header {
   background-color: #6d6868;
   padding-left: 8px;
 }
+/* form appearance */
+.form {
+  list-style: none;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.h1 {
+  grid-row: 1/2;
+}
+.contact {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border: 4px solid #494444;
+  margin-left: 10px;
+}
+.home {
+  grid-column: 1/2;
+  grid-row-start: 2;
+  margin-right: 30px;
+  text-align: justify;
+}
+#background {
+  width: 275px;
+  background-color: #FFE2D6;
+  grid-column: 2/3;
+  grid-row-start: 2;    
+}
 /* Main content */
 .main {
   margin-left: 220px; /* Same as the width of the sidenav */
   font-size: 20px;
   padding: 0px 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
-img.me {
-  /* border: 4px solid #494444; */
-  height: 100px;
-  opacity: 80%;
-}
-img.logo {
-  height: 100px;
-  grid-column-start: 2;
-}
-img.banner {
-  height: 100px;
-  grid-column-start: 3;
-}
-.icon {
-  height: 50px;
-  opacity: 65%;
-  margin: auto;
-}
-.resume {
-    width: 200px;
-}
-* {box-sizing:border-box}
 
+* {box-sizing:border-box}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 300px;
+  max-width: 350px;
   position: relative;
   margin: auto;
 }
@@ -208,7 +217,47 @@ footer {
   padding-left: 25px;
 }
 
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+@media screen and (max-height: 450px) and (max-width: 900px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+  #hero, .home-grid, .rivers-grid {
+      display: block;
+      height: auto;
   }
+  nav, footer {
+      flex-direction: column;
+  }
+  nav a {
+      display: block;
+      padding: 15px;
+  }
+  #hero {
+      margin-top: 0;
+  }
+  #hero-msg {
+      margin-top: 0;
+  }
+  #hero-msg h4 {
+      display: none;
+  }
+  .home-title {
+      font-size: 25px;
+      color: #6f7364;
+  }
+  .rivers-card, .camping-card, .rapids-card, .salmon-river, .desolation, .grand-canyon, .splash-img { 
+      margin: 50px auto;
+      width: 60%;
+  }
+  #background {
+      display: none;
+  }
+  .mountains, .msg, .sr-msg, .d-msg, .gc-msg {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+  }
+  footer {
+      margin-top: 25px;
+  }
+}
